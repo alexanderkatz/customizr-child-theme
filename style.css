@@ -1,0 +1,193 @@
+/*
+ Theme Name:     Customizr Child
+ Theme URI:      http://example.com/twenty-thirteen-child/
+ Description:    Twenty Thirteen Child Theme
+ Author:         Alex Katz
+ Author URI:     http://example.com
+ Template:       customizr
+ Version:        1.0.0
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../customizr/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+Custom Fonts
+@font-face
+{
+font-family: sketchetik;
+    src: url('fonts/sketchetiklight.eot');
+    src: url('fonts/sketchetiklight.eot') format('embedded-opentype'),
+         url('fonts/sketchetiklight.woff') format('woff'),
+         url('fonts/sketchetiklight.ttf') format('truetype'),
+         url('fonts/sketchetiklight.svg#SketchetikLightRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'biko';
+    src: url('fonts/biko_regular.eot');
+    src: url('fonts/biko_regular.eot') format('embedded-opentype'),
+         url('fonts/biko_regular.woff') format('woff'),
+         url('fonts/biko_regular.ttf') format('truetype'),
+         url('fonts/biko_regular.svg#BikoRegular') format('svg');
+}
+
+/* Font changes -------------------------------------------------------------- */
+
+/* Change Slider Titles (2em) font-size, (Garamond) family, (red) color */
+.carousel-caption h1 {
+font-family:    biko;
+font-size:      2em;
+color:			white;
+}
+.carousel-caption p {
+font-family:    biko;
+font-size:      2em;
+color:			blue;
+}
+.carousel-caption .btn {
+font-family:    biko;
+font-size:      2em;
+color:			yellow;
+}
+/* Feature Pages Titles */
+.marketing h2 {
+	font-family:    biko;
+}
+/*-------------------------------------------------------------- */
+
+
+/*Logo*/
+div.brand.span3
+{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	position:absolute;
+	top:-10px;
+}
+/* Center the logo (function custom_center_brand)       */
+.brand.span10.offset1 {
+	float:      none;
+	position: absolute;
+	top: 0px;
+	z-index:1;
+}
+/*-------------------------------------------------------------- */
+
+/* Center the Tagline                                   */
+.tc-header .outside {
+display:    block;
+text-align: center;
+}
+
+/* Center the Menu (function remove_span9_navbar_display) */
+/* Center the Menu (function prevent_social_in_header)  */
+.navbar-inner .row-fluid .span7.site-description {
+display:    none; 
+text-align: center;
+}
+.navbar-wrapper .navbar.notresp.row-fluid { 
+	float:      none; 
+	width:      100%; 
+	margin:     0 auto; 
+}
+.navbar .navbar-inner {
+	padding:    20px 0 0; 
+}
+
+/* Variable number of floating elements */
+.navbar .nav {
+	float:      none; 
+	width:      100%; 
+	text-align: center;
+}
+.navbar .nav > li {
+	float:      none; 
+	display:    inline-block;
+}
+
+/* Fix 2nd levels */ 
+.navbar .nav > li .dropdown-menu li { 
+	float: left; 
+	width: 100%; 
+	text-align: left; 
+} 
+
+@media (max-width: 979px) { 
+.tc-header .brand { width: auto; } 
+.row-fluid .offset1:first-child { margin-left: 0; } 
+}
+
+/* Visual Aspects of Menu
+-------------------------------------------------------------- */
+
+/* Adjust Menu (red) text color, (Garamond) font-family, (1.5em) font-size  */
+.navbar .nav > li > a, .navbar .nav > li > a:first-letter,
+.navbar .nav > li.current-menu-item > a, 
+.navbar .nav > li.current-menu-ancestor > a {
+	display:        inline;
+	color:          white;                        
+	font-family:    sketchetikLight;
+	font-size:      17px;
+	padding:        5px 20px;
+	text-shadow:    none;
+}
+
+/* Remove Navbar box           */
+.navbar .navbar-inner {
+	height:36px;	
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
+	background:         none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:    none;
+	box-shadow:         none;
+
+	position:relative;
+}
+/* Rule For HOME PAGE */
+.page-id-24 .navbar .navbar-inner {
+	top:-26px;
+}
+
+.navbar-wrapper{
+	background:url(images/menubg.png) no-repeat;
+	background-size:110% 36px;
+	position:relative;
+	top: 70px;
+}
+/* Rule For HOME PAGE */
+.page-id-24 .navbar-wrapper{
+	top:-45px;
+}
+
+/* This is going to be a conditional CSS class, for any page other than home */
+.navbar-wrapper-page{
+}
+
+/*make the menu sub-menu items drop down on mouse hover */
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+    margin: 0;
+}
+ 
+
+/*-------------------------------------------------------------- */
+
+/* Remove grey bar  */
+header.tc-header {
+    border-bottom: 0;
+}
+footer#footer {
+border-top:     none;
+}
+
+/* Reduce whitespace  */
+#main-wrapper {
+margin-bottom:  0px;
+}
